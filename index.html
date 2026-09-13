@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIOGRAFI - Muhamad Rafiki</title>
+
+    <!-- LINKED CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EMBEDDED CSS -->
+    <style>
+        .welcome-text {
+            font-size: 1.1rem;
+            color: #d9f6ff;
+            margin-bottom: 30px;
+        }
+
+        .biodata-card {
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background bubbles -->
+    <div class="bubbles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <main>
+
+        <!-- ===================== -->
+        <!-- SECTION 1 : OPENING -->
+        <!-- ===================== -->
+        <section class="page active" id="page1">
+
+            <div class="ship">⛵</div>
+
+            <p class="small-title">SELAMAT DATANG</p>
+
+            <h1>BIOGRAFI<br><span>SAYA</span></h1>
+
+            <p class="welcome-text">
+                TENTANG DIRI SAYA
+            </p>
+
+            <!-- INLINE CSS -->
+            <button
+                class="next-btn"
+                style="border: 2px solid #ffffff; letter-spacing: 2px;"
+                onclick="nextPage()">
+                MULAI PERJALANAN →
+            </button>
+
+        </section>
+
+
+        <!-- ===================== -->
+        <!-- SECTION 2 : ABOUT -->
+        <!-- ===================== -->
+        <section class="page" id="page2">
+
+            <div class="icon">🌊</div>
+
+            <p class="small-title">ABOUT ME</p>
+
+            <h2>WHO AM I?</h2>
+
+            <div class="content-box">
+                <p>
+                    Halo! Nama saya <strong>Muhamad Rafiki</strong>,
+                    biasa dipanggil <strong>Fiki</strong>.
+                </p>
+
+                <p>
+                    Saya adalah siswa kelas XI jurusan
+                    <strong>Rekayasa Perangkat Lunak</strong>
+                    di <strong>SMKN 1 Semparuk</strong>.
+                </p>
+
+                <p>
+                    Saya orangnya baik hati, sopan, dan ramah.
+                    Saya juga memiliki sifat pemalu, tetapi saya
+                    terus belajar untuk menjadi lebih baik.
+                </p>
+            </div>
+
+            <div class="navigation">
+                <button class="back-btn" onclick="prevPage()">← BACK</button>
+                <button class="next-btn" onclick="nextPage()">NEXT →</button>
+            </div>
+
+        </section>
+
+
+        <!-- ===================== -->
+        <!-- SECTION 3 : BIODATA -->
+        <!-- ===================== -->
+        <section class="page" id="page3">
+
+            <div class="icon">🐚</div>
+
+            <p class="small-title">MY PROFILE</p>
+
+            <h2>BIODATA</h2>
+
+            <div class="biodata-card">
+
+                <div class="data-row">
+                    <span>Nama</span>
+                    <strong>Muhamad Rafiki</strong>
+                </div>
+
+                <div class="data-row">
+                    <span>Panggilan</span>
+                    <strong>Fiki</strong>
+                </div>
+
+                <div class="data-row">
+                    <span>Lahir</span>
+                    <strong>Semparuk, 14 September 2009</strong>
+                </div>
+
+                <div class="data-row">
+                    <span>Kelas</span>
+                    <strong>XI</strong>
+                </div>
+
+                <div class="data-row">
+                    <span>Jurusan</span>
+                    <strong>Rekayasa Perangkat Lunak</strong>
+                </div>
+
+                <div class="data-row">
+                    <span>Sekolah</span>
+                    <strong>SMKN 1 Semparuk</strong>
+                </div>
+
+            </div>
+
+            <div class="navigation">
+                <button class="back-btn" onclick="prevPage()">← BACK</button>
+                <button class="next-btn" onclick="nextPage()">NEXT →</button>
+            </div>
+
+        </section>
+
+
+        <!-- ===================== -->
+        <!-- SECTION 4 : PASSION -->
+        <!-- ===================== -->
+        <section class="page" id="page4">
+
+            <div class="icon">🎮</div>
+
+            <p class="small-title">MY PASSION</p>
+
+            <h2>HOBBY & DREAM</h2>
+
+            <div class="cards">
+
+                <div class="info-card">
+                    <div class="card-icon">🎮</div>
+                    <h3>HOBBY</h3>
+                    <p>
+                        Bermain game adalah salah satu kegiatan
+                        yang saya sukai di waktu luang.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">💼</div>
+                    <h3>CITA-CITA</h3>
+                    <p>
+                        Saya ingin menjadi seorang
+                        <strong>pengusaha atau pedagang</strong>
+                        di masa depan.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="navigation">
+                <button class="back-btn" onclick="prevPage()">← BACK</button>
+                <button class="next-btn" onclick="nextPage()">NEXT →</button>
+            </div>
+
+        </section>
+
+
+        <!-- ===================== -->
+        <!-- SECTION 5 : PERSONALITY -->
+        <!-- ===================== -->
+        <section class="page" id="page5">
+
+            <div class="icon">🐠</div>
+
+            <p class="small-title">MY PERSONALITY</p>
+
+            <h2>THAT'S ME</h2>
+
+            <div class="personality">
+
+                <div>
+                    <span>🤝</span>
+                    <h3>BAIK HATI</h3>
+                    <p>Suka berbuat baik kepada orang lain.</p>
+                </div>
+
+                <div>
+                    <span>🙏</span>
+                    <h3>SOPAN</h3>
+                    <p>Berusaha menghargai dan menghormati orang lain.</p>
+                </div>
+
+                <div>
+                    <span>😊</span>
+                    <h3>RAMAH</h3>
+                    <p>Senang bersikap baik dan bersahabat.</p>
+                </div>
+
+                <div>
+                    <span>😳</span>
+                    <h3>PEMALU</h3>
+                    <p>Salah satu hal yang masih ingin saya kembangkan.</p>
+                </div>
+
+            </div>
+
+            <div class="navigation">
+                <button class="back-btn" onclick="prevPage()">← BACK</button>
+                <button class="next-btn" onclick="nextPage()">NEXT →</button>
+            </div>
+
+        </section>
+
+
+        <!-- ===================== -->
+        <!-- SECTION 6 : CLOSING -->
+        <!-- ===================== -->
+        <section class="page" id="page6">
+
+            <div class="sun">☀️</div>
+
+            <p class="small-title">THE END</p>
+
+            <h2>KEEP SAILING</h2>
+
+            <div class="closing-text">
+                <p>
+                    Setiap perjalanan memiliki gelombangnya sendiri.
+                </p>
+
+                <p>
+                    Terus belajar, terus berkembang,
+                    dan jangan berhenti mengejar impian.
+                </p>
+            </div>
+
+            <button class="next-btn" onclick="restartPage()">
+                ↻ KEMBALI KE AWAL
+            </button>
+
+            <br><br>
+
+            <button class="back-btn" onclick="prevPage()">
+                ← BACK
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Muhamad Rafiki • My Ocean Journey 🌊</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

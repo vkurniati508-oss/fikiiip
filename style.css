@@ -1,0 +1,443 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 100%,
+        #16a9b8 0%,
+        #087ca5 35%,
+        #064b78 70%,
+        #031d3b 100%);
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+main {
+    min-height: 92vh;
+    position: relative;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    min-height: 92vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+
+    opacity: 0;
+    transform: translateX(60px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+h1 {
+    font-size: clamp(45px, 9vw, 90px);
+    line-height: 0.95;
+    letter-spacing: 5px;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+h1 span {
+    color: #8df3ff;
+}
+
+h2 {
+    font-size: clamp(30px, 6vw, 55px);
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.ship {
+    font-size: 80px;
+    margin-bottom: 15px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.sun {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn,
+.back-btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.next-btn {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.next-btn:hover {
+    background: white;
+    color: #075d85;
+    transform: translateY(-4px);
+}
+
+.back-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-4px);
+}
+
+.navigation {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-box {
+    max-width: 650px;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+    padding: 25px;
+
+    backdrop-filter: blur(10px);
+
+    line-height: 1.8;
+}
+
+.content-box p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   BIODATA
+========================= */
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 12px 5px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-row span {
+    opacity: 0.7;
+}
+
+.data-row strong {
+    text-align: right;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.info-card {
+    flex: 1;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.17);
+}
+
+.card-icon {
+    font-size: 45px;
+}
+
+.info-card p {
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+
+/* =========================
+   PERSONALITY
+========================= */
+
+.personality {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.personality div {
+    padding: 20px;
+
+    background: rgba(255,255,255,0.10);
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+}
+
+.personality span {
+    font-size: 35px;
+}
+
+.personality p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing-text {
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.closing-text p:first-child {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   BUBBLES
+========================= */
+
+.bubbles span {
+    position: fixed;
+    bottom: -50px;
+
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+
+    animation: bubble 12s linear infinite;
+}
+
+.bubbles span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.bubbles span:nth-child(3) {
+    left: 40%;
+    animation-delay: 6s;
+}
+
+.bubbles span:nth-child(4) {
+    left: 55%;
+    animation-delay: 2s;
+}
+
+.bubbles span:nth-child(5) {
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.bubbles span:nth-child(6) {
+    left: 85%;
+    animation-delay: 8s;
+}
+
+.bubbles span:nth-child(7) {
+    left: 92%;
+    animation-delay: 1s;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+
+    font-size: 12px;
+    opacity: 0.55;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .personality {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .biodata-card {
+        padding: 18px;
+    }
+
+    .data-row {
+        font-size: 13px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .next-btn,
+    .back-btn {
+        padding: 11px 18px;
+    }
+}
